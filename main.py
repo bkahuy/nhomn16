@@ -1,4 +1,3 @@
-from pyexpat import model
 from fastapi import FastAPI, Request, Form
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
