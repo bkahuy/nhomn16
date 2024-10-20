@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dự đoán giá nhà</title>
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
     <h1>Dự đoán giá nhà</h1>
@@ -28,5 +29,9 @@
         
         <input type="submit" value="Dự đoán">
     </form>
+    
+    {% if prediction %}
+    <h2>Giá nhà dự đoán: {{ prediction }} VND</h2>
+    {% endif %}
 </body>
 </html>
