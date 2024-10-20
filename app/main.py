@@ -40,7 +40,7 @@ X_test_scaled = scaler.transform(X_test)
 # Xây dựng các mô hình base
 base_models = [
     ('linear', Ridge(alpha=10.0)),
-    ('mlp', MLPRegressor(hidden_layer_sizes=(100, 50), max_iter=500, activation='relu', random_state=42)),
+    ('mlp', MLPRegressor(hidden_layer_sizes=(100, 50), max_iter=500, activation='relu', random_state=42, early_stopping=True)),
     ('rf', RandomForestRegressor(n_estimators=100, random_state=42))
 ]
 
