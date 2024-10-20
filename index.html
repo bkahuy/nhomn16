@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dự đoán giá nhà</title>
+</head>
+<body>
+    <h1>Dự đoán giá nhà</h1>
+    <form action="/predict" method="POST">
+        <label for="bedrooms">Số phòng ngủ:</label><br>
+        <input type="number" name="bedrooms" required><br><br>
+        
+        <label for="garage">Số chỗ để xe:</label><br>
+        <input type="number" name="garage" required><br><br>
+        
+        <label for="land_area">Diện tích đất (m²):</label><br>
+        <input type="number" name="land_area" required><br><br>
+        
+        <label for="floor_area">Diện tích sàn (m²):</label><br>
+        <input type="number" name="floor_area" required><br><br>
+        
+        <label for="build_year">Năm xây dựng:</label><br>
+        <input type="number" name="build_year" required><br><br>
+        
+        <label for="cbd_dist">Khoảng cách đến trung tâm (m):</label><br>
+        <input type="number" name="cbd_dist" required><br><br>
+        
+        <input type="submit" value="Dự đoán">
+    </form>
+</body>
+</html>

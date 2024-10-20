@@ -12,12 +12,14 @@ from sklearn.ensemble import StackingRegressor, RandomForestRegressor
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import mean_squared_error, r2_score
 import os
+from flask import Flask, render_template
 
 app = FastAPI()
+appp = Flask(__name__)
 
 if __name__ == "__main__":
     import uvicorn
-    port = int(os.environ.get("PORT", 8000))
+    port = int(os.environ.get("PORT", 10000))
     uvicorn.run(app, host="0.0.0.0", port=port)
 
 
@@ -44,7 +46,7 @@ X_test_scaled = scaler.transform(X_test)
 base_models = [
     ('linear', LinearRegression()),
     ('ridge', Ridge(alpha=10.0)),
-    ('mlp', MLPRegressor(hidden_layer_sizes=(30, 30), max_iter=1000, learning_rate_init=0.001, activation='relu', random_state=42)),
+    ('mlp', MLPRegressor(hidden_layer_sizes=(30, 30), max_iter=500, learning_rate_init=0.001, activation='relu', random_state=42)),
     ('rf', RandomForestRegressor(n_estimators=100, random_state=42))
 ]
 
