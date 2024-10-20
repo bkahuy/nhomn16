@@ -14,7 +14,6 @@ import os
 from flask import Flask, render_template
 
 app = FastAPI()
-appp = Flask(__name__)
 
 if __name__ == "__main__":
     import uvicorn
