@@ -18,7 +18,7 @@ appp = Flask(__name__)
 
 if __name__ == "__main__":
     import uvicorn
-    port = int(os.environ.get("PORT", 10000))
+    port = int(os.environ.get("PORT", 8000))
     uvicorn.run(app, host="0.0.0.0", port=port)
 
 
@@ -73,7 +73,7 @@ r2 = r2_score(y_test, y_pred)
 #     pickle.dump(stacking_regressor, file)
 
 # Mount thư mục static
-# app.mount("/", StaticFiles(directory="static", html=True), name="static")
+app.mount("/", StaticFiles(directory="static", html=True), name="static")
 
 @app.get("/", response_class=HTMLResponse)
 def read_root():
