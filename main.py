@@ -22,7 +22,7 @@ if __name__ == "__main__":
 
 
 # Đọc dữ liệu
-df = pd.read_csv("dataset4.csv")
+df = pd.read_csv("dataset.csv")
 
 # Chia dữ liệu thành features và target
 X = df.drop(columns=['PRICE'])
