@@ -45,7 +45,7 @@ X_test_scaled = scaler.transform(X_test)
 base_models = [
     ('linear', LinearRegression()),
     ('ridge', Ridge(alpha=10.0)),
-    ('mlp', MLPRegressor(hidden_layer_sizes=(30, 30), max_iter=500, learning_rate_init=0.001, activation='relu', random_state=42)),
+    ('mlp', MLPRegressor(hidden_layer_sizes=(100, 50), max_iter=500, activation='relu', random_state=42)),
     ('rf', RandomForestRegressor(n_estimators=100, random_state=42))
 ]
 
@@ -65,8 +65,8 @@ y_pred = stacking_regressor.predict(X_test_scaled)
 mse = mean_squared_error(y_test, y_pred)
 r2 = r2_score(y_test, y_pred)
 
-print(f"Mean Squared Error (MSE): {mse}")
-print(f"R² Score: {r2}")
+# print(f"Mean Squared Error (MSE): {mse}")
+# print(f"R² Score: {r2}")
 
 # # Lưu mô hình
 # with open('best_model.pkl', 'wb') as file:
