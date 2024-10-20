@@ -11,7 +11,7 @@ from sklearn.ensemble import StackingRegressor, RandomForestRegressor
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import mean_squared_error, r2_score
 import os
-from flask import Flask, render_template
+
 
 app = FastAPI()
 
