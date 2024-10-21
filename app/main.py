@@ -16,8 +16,9 @@ app = FastAPI()
 if __name__ == "__main__":
     import uvicorn
     import os
-    port = int(os.getenv("PORT", 8000))  # Sử dụng cổng từ biến môi trường nếu có, mặc định là 8000
+    port = int(os.environ.get("PORT", 10000))  # Chọn cổng 10000 nếu không tìm thấy PORT
     uvicorn.run(app, host="0.0.0.0", port=port)
+
 
 
 # Mount thư mục static để phục vụ các file tĩnh (CSS, JS, hình ảnh)
